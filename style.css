@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Federo';
+    src: url('./fonts/Federo-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('./fonts/Nunito-Regular.ttf');
+    font-weight: normal;
+}
+
+:root {
+    --background: #0c0e18;
+    --primary: #e8e8e8;
+    --muted-primary: #43444c;
+    --secondary: #e77d21;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+    font-weight: normal;
+    text-align: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 1rem;
+    height: 100%;
+}
+
+h1 {
+    color: var(--primary);
+    font-family: 'Federo', sans-serif;
+    font-size: 3rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    svg {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--muted-primary);
+        transition: fill 0.2s ease-in-out;
+    }
+
+    a:hover {
+        svg {
+            fill: var(--secondary);
+        }
+    }
+}
